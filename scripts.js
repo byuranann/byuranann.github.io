@@ -40,10 +40,10 @@ form.addEventListener('submit', function (e) {
 
     // Perform the calculation using the provided formula
     const yieldEstimate =
-        ((((1600 / (rowSpacing / 100)) / (4 / earsIn4Meters)) * femaleArea) *
+        (((((1600 / (rowSpacing / 100)) / (4 / earsIn4Meters)) * femaleArea) *
             kernelsPerEar *
             (uniformFactor / 100)) /
-        kernelsPerKg;
+        kernelsPerKg) / 0.6;
 
     // Calculate Total Wet Ear (Kg)
     const totalWetEar = standingArea * yieldEstimate;
