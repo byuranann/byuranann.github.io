@@ -1,5 +1,6 @@
 /* Add this to styles.css */
 select {
+    font-size: large;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -16,6 +17,7 @@ input[readonly] {
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    font-size: large;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
