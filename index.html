@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corn Yield Estimate App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Corn Yield Estimate App</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Enter Your Data</h2>
+            <form id="yieldForm">
+                <!-- Hybrid Selection Dropdown -->
+                <label for="hybrid">Select Hybrid:</label>
+                <select id="hybrid" name="hybrid" required>
+                    <option value="">-- Select a Hybrid --</option>
+                    <option value="5678">#90</option>
+                    <option value="6176">#71</option>
+                    <option value="5678">#80</option>
+                    <option value="6697">#51</option>
+                    <option value="5260">#55</option>
+                    <option value="4051">#86</option>
+                    <option value="5260">#56</option>
+                    <option value="5260">#57</option>
+                    <option value="5201">#SB04</option>
+                    <option value="6697">#60</option>
+                    <option value="6697">#61</option>
+                </select>
+
+                <!-- Female Area Selection Dropdown -->
+                <label for="femaleAreaRatio">Select Female Area Ratio:</label>
+                <select id="femaleAreaRatio" name="femaleAreaRatio" required>
+                    <option value="">-- Select a Ratio --</option>
+                    <option value="0.67">2:1</option>
+                    <option value="0.75">3:1</option>
+                    <option value="0.80">4:1</option>
+                    <option value="0.83">5:1</option>
+                    <option value="0.60">3:2</option>
+                    <option value="0.67">4:2</option>
+                    <option value="1.00">Interrow</option>
+                    <option value="0.86">6:1</option>
+                    <option value="0.88">7:1</option>
+                </select>
+
+                <!-- Other Input Fields -->
+                <label for="rowSpacing">Average Row Spacing (cm):</label>
+                <input type="number" id="rowSpacing" name="rowSpacing" step="0.1" required>
+
+                <label for="earsIn4Meters">Average Number of Ears in 4 Meters:</label>
+                <input type="number" id="earsIn4Meters" name="earsIn4Meters" step="0.1" required>
+
+                <label for="kernelsPerEar">Average Kernels per Ear:</label>
+                <input type="number" id="kernelsPerEar" name="kernelsPerEar" required>
+
+                <label hidden for="femaleArea">Value of Female Area (B):</label>
+                <input type="hidden" id="femaleArea" name="femaleArea" step="0.1" readonly required>
+
+                <label for="uniformFactor">Field Uniform Factor (65-90%):</label>
+                <input type="number" id="uniformFactor" name="uniformFactor" step="0.1" required>
+
+                <label hidden for="kernelsPerKg">Value of Kernels per Kg (BB):</label>
+                <input type="hidden" id="kernelsPerKg" name="kernelsPerKg" readonly required>
+
+                <!-- New Field: Standing Area (Rai) -->
+                <label for="standingArea">Standing Area (Rai):</label>
+                <input type="number" id="standingArea" name="standingArea" step="0.1" required>
+
+                <button type="submit">Calculate Yield</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Estimated Yield</h2>
+            <p id="result"></p>
+            <!-- New Output: Total Wet Ear (Kg) -->
+            <p id="totalWetEar"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Popporn Yingthongchai</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
