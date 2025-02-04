@@ -63,6 +63,7 @@ form select {
 
 form button {
     padding: 10px;
+    font-size: large;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -145,4 +146,18 @@ footer {
     form button {
         padding: 6px;
     }
+}
+
+/* Custom Styles for Estimated Yield and Total Wet Ear */
+#result,
+#totalWetEar {
+    font-size: 20px; /* Bigger font size */
+    margin: 10px 0; /* Add some spacing */
+}
+
+/* Custom Styles for Highlighted Numbers */
+.highlight-number {
+    color: orange; /* Red color for numbers */
+    font-size: 20px; /* Bigger font size for numbers */
+    font-weight: bold; /* Bold text for numbers */
 }

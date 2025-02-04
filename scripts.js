@@ -50,13 +50,13 @@ form.addEventListener('submit', function (e) {
 
     // Display the result
     resultElement.innerHTML = `
-        <strong>Estimated Yield:</strong><br>
-        ${yieldEstimate.toFixed(2)} kg per rai
+        <strong>ผลผลิตต่อไร่:</strong><br>
+        <span class="highlight-number">${yieldEstimate.toFixed(2)}</span> กิโลกรัม ต่อ ไร่
     `;
 
     // Display Total Wet Ear (Kg)
     totalWetEarElement.innerHTML = `
-        <strong>Total Wet Ear (Kg):</strong><br>
-        ${totalWetEar.toFixed(2)} kg
+        <strong>ผลผลิตรวม (กก.):</strong><br>
+        <span class="highlight-number">${totalWetEar.toFixed(2)}</span> กิโลกรัม
     `;
 });

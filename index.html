@@ -13,12 +13,12 @@
 
     <main>
         <section>
-            <h2>Enter Your Data</h2>
+            <h2>กรอกข้อมูล</h2>
             <form id="yieldForm">
                 <!-- Hybrid Selection Dropdown -->
-                <label for="hybrid">Select Hybrid:</label>
+                <label for="hybrid">สายพันธุ์:</label>
                 <select id="hybrid" name="hybrid" required>
-                    <option value="">-- Select a Hybrid --</option>
+                    <option value="">-- เลือก สายพันธุ์ --</option>
                     <option value="5678">#90</option>
                     <option value="6176">#71</option>
                     <option value="5678">#80</option>
@@ -33,9 +33,9 @@
                 </select>
 
                 <!-- Female Area Selection Dropdown -->
-                <label for="femaleAreaRatio">Select Female Area Ratio:</label>
+                <label for="femaleAreaRatio">อัตราส่วนตัวเมียกับตัวผู้:</label>
                 <select id="femaleAreaRatio" name="femaleAreaRatio" required>
-                    <option value="">-- Select a Ratio --</option>
+                    <option value="">-- เลือก อัตรส่วนการปลูก --</option>
                     <option value="0.67">2:1</option>
                     <option value="0.75">3:1</option>
                     <option value="0.80">4:1</option>
@@ -48,34 +48,34 @@
                 </select>
 
                 <!-- Other Input Fields -->
-                <label for="rowSpacing">Average Row Spacing (cm):</label>
+                <label for="rowSpacing">ระยะระหว่างแถว (ซม.):</label>
                 <input type="number" id="rowSpacing" name="rowSpacing" step="0.1" required>
 
-                <label for="earsIn4Meters">Average Number of Ears in 4 Meters:</label>
+                <label for="earsIn4Meters">จำนวนต้นที่ให้ฝักในระยะ 4 เมตร:</label>
                 <input type="number" id="earsIn4Meters" name="earsIn4Meters" step="0.1" required>
 
-                <label for="kernelsPerEar">Average Kernels per Ear:</label>
+                <label for="kernelsPerEar">จำนวนเมล็ดต่อฝัก:</label>
                 <input type="number" id="kernelsPerEar" name="kernelsPerEar" required>
 
                 <label hidden for="femaleArea">Value of Female Area (B):</label>
                 <input type="hidden" id="femaleArea" name="femaleArea" step="0.1" readonly required>
 
-                <label for="uniformFactor">Field Uniform Factor (65-90%):</label>
+                <label for="uniformFactor">ความสมบูรณ์ของแปลง (65-90%):</label>
                 <input type="number" id="uniformFactor" name="uniformFactor" step="0.1" required>
 
                 <label hidden for="kernelsPerKg">Value of Kernels per Kg (BB):</label>
                 <input type="hidden" id="kernelsPerKg" name="kernelsPerKg" readonly required>
 
                 <!-- New Field: Standing Area (Rai) -->
-                <label for="standingArea">Standing Area (Rai):</label>
+                <label for="standingArea">พื้นที่ปลูกคงเหลือ (ไร่):</label>
                 <input type="number" id="standingArea" name="standingArea" step="0.1" required>
 
-                <button type="submit">Calculate Yield</button>
+                <button type="submit">คำณวณผลผลิต</button>
             </form>
         </section>
 
         <section>
-            <h2>Estimated Yield</h2>
+            <h2>ประเมินผลผลิตที่ได้รับ</h2>
             <p id="result"></p>
             <!-- New Output: Total Wet Ear (Kg) -->
             <p id="totalWetEar"></p>
