@@ -59,4 +59,7 @@ form.addEventListener('submit', function (e) {
         <strong>ผลผลิตรวม (กก.):</strong><br>
         <span class="highlight-number">${totalWetEar.toFixed(2)}</span> กิโลกรัม
     `;
+
+     // Show the results section
+     resultsSection.hidden = false; // Remove the hidden attribute
 });
