@@ -1,5 +1,7 @@
 /* Add this to styles.css */
 select {
+    -webkit-appearance: none;
+    appearance: none;
     background-color: #eee;
     border: none;
     padding: 1rem;
@@ -58,6 +60,8 @@ form label {
 
 form input,
 form select {
+    -webkit-appearance: none;
+    appearance: none;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -120,6 +124,8 @@ footer {
 
     form input,
     form select {
+        -webkit-appearance: none;
+    appearance: none;
         background-color: #eee;
         border: none;
         padding: 1rem;
@@ -155,6 +161,8 @@ footer {
 
     form input,
     form select {
+        -webkit-appearance: none;
+        appearance: none;
         background-color: #eee;
         border: none;
         padding: 1rem;
