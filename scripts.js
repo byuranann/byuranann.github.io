@@ -6,6 +6,7 @@ const hybridDropdown = document.getElementById('hybrid');
 const femaleAreaRatioDropdown = document.getElementById('femaleAreaRatio');
 const kernelsPerKgInput = document.getElementById('kernelsPerKg');
 const femaleAreaInput = document.getElementById('femaleArea');
+const populationElement = document.getElementById('population');
 
 // Add event listener for hybrid selection
 hybridDropdown.addEventListener('change', function () {
@@ -47,6 +48,15 @@ form.addEventListener('submit', function (e) {
 
     // Calculate Total Wet Ear (Kg)
     const totalWetEar = standingArea * yieldEstimate;
+
+    // Calculate Population
+    const population = ((1600 / (rowSpacing / 100)) / (4 / earsIn4Meters)) * femaleArea;
+
+    // Display the population
+    populationElement.innerHTML = `
+        <strong>จำนวนประชากรของตัวเมียต่อไร่:</strong><br>
+        <span class="highlight-number">${population.toFixed(2)}</span> ต้น ต่อ ไร่
+    `;
 
     // Display the result
     resultElement.innerHTML = `

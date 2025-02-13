@@ -181,7 +181,8 @@ footer {
 
 /* Custom Styles for Estimated Yield and Total Wet Ear */
 #result,
-#totalWetEar {
+#totalWetEar,
+#population {
     font-size: 24px; /* Bigger font size */
     margin: 10px 0; /* Add some spacing */
 }
