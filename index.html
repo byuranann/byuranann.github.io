@@ -49,26 +49,26 @@
 
                 <!-- Other Input Fields -->
                 <label for="rowSpacing">ระยะระหว่างแถว (ซม.):</label>
-                <input type="number" id="rowSpacing" name="rowSpacing" step="0.1" required>
+                <input type="number" id="rowSpacing" name="rowSpacing" step="0.01" required>
 
                 <label for="earsIn4Meters">จำนวนต้นที่ให้ฝักในระยะ 4 เมตร:</label>
-                <input type="number" id="earsIn4Meters" name="earsIn4Meters" step="0.1" required>
+                <input type="number" id="earsIn4Meters" name="earsIn4Meters" step="0.01" required>
 
                 <label for="kernelsPerEar">จำนวนเมล็ดต่อฝัก:</label>
-                <input type="number" id="kernelsPerEar" name="kernelsPerEar" required>
+                <input type="number" id="kernelsPerEar" name="kernelsPerEar" step="0.01" required>
 
                 <label hidden for="femaleArea">Value of Female Area (B):</label>
-                <input type="hidden" id="femaleArea" name="femaleArea" step="0.1" readonly required>
+                <input type="hidden" id="femaleArea" name="femaleArea" step="0.01" readonly required>
 
                 <label for="uniformFactor">ความสมบูรณ์ของแปลง (65-90%):</label>
-                <input type="number" id="uniformFactor" name="uniformFactor" step="0.1" required>
+                <input type="number" id="uniformFactor" name="uniformFactor" step="0.01" required>
 
                 <label hidden for="kernelsPerKg">Value of Kernels per Kg (BB):</label>
                 <input type="hidden" id="kernelsPerKg" name="kernelsPerKg" readonly required>
 
                 <!-- New Field: Standing Area (Rai) -->
                 <label for="standingArea">พื้นที่ปลูกคงเหลือ (ไร่):</label>
-                <input type="number" id="standingArea" name="standingArea" step="0.1" required>
+                <input type="number" id="standingArea" name="standingArea" step="0.01" required>
 
                 <button type="submit">คำนวณผลผลิต</button>
             </form>
