@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+        <!-- Watermark Options - Choose one by uncommenting -->
+    
+    <!-- Option 1: Large diagonal watermark -->
+    <div class="watermark">© Popporn Yingthongchai</div>
+    
+    <!-- Option 2: Corner watermark (uncomment to use instead) -->
+    <div class="watermark-corner">© Popporn Yingthongchai</div>
+    
+    <!-- Option 3: Pattern watermark (uncomment to use instead) -->
+    <!--<div class="watermark-pattern">© Popporn Yingthongchai</div> -->
+
     <header>
         <h1>Corn Yield Estimate App</h1>
     </header>
@@ -57,13 +68,13 @@
                 <label for="kernelsPerEar">จำนวนเมล็ดต่อฝัก:</label>
                 <input type="number" id="kernelsPerEar" name="kernelsPerEar" step="0.01" required>
 
-                <label hidden for="femaleArea">Value of Female Area (B):</label>
+                <label style="display: none;" for="femaleArea">Value of Female Area (B):</label>
                 <input type="hidden" id="femaleArea" name="femaleArea" step="0.01" readonly required>
 
                 <label for="uniformFactor">ความสมบูรณ์ของแปลง (65-90%):</label>
                 <input type="number" id="uniformFactor" name="uniformFactor" step="0.01" required>
 
-                <label hidden for="kernelsPerKg">Value of Kernels per Kg (BB):</label>
+                <label style="display: none;" for="kernelsPerKg">Value of Kernels per Kg (BB):</label>
                 <input type="hidden" id="kernelsPerKg" name="kernelsPerKg" readonly required>
 
                 <!-- New Field: Standing Area (Rai) -->
