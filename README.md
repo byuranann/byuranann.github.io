@@ -1,22 +1,33 @@
-# Location Data Collector
+# Corn Yield Estimate App
 
 ## Objective
-The **Location Data Collector** is a web-based application designed to streamline the process of recording and managing field location data. It allows users to capture their current geographical coordinates (Latitude and Longitude) along with specific field details such as Name, Variety, and Area. The data is then timestamped and can be sent to Google Sheets or exported for further analysis. This tool aims to improve accuracy and efficiency in field data collection.
+The **Corn Yield Estimate App** is a web-based tool designed to help farmers and agriculturalists estimate the potential yield of corn crops. By inputting specific field data and crop characteristics, users can calculate the expected calculation of wet ear weight per rai and the total production for a given standing area. This aids in harvest planning and resource management.
 
-## How it works
+## How it Works
+1.  **Select Hybrid (สายพันธุ์)**: Choose the specific corn hybrid being cultivated. This automatically sets the **Kernels per Kg (BB)** value used in the calculation.
+2.  **Select Female Area Ratio (อัตราส่วนตัวเมียกับตัวผู้)**: Choose the planting ratio of female to male plants. This determines the **Female Area (B)** factor.
+3.  **Enter Field Data**:
+    -   **Row Spacing (ระยะระหว่างแถว)**: The distance between rows in centimeters.
+    -   **Ears in 4 Meters (จำนวนต้นที่ให้ฝักในระยะ 4 เมตร)**: The number of productive ears found in a 4-meter row section.
+    -   **Kernels per Ear (จำนวนเมล็ดต่อฝัก)**: The average number of kernels on a single ear.
+    -   **Uniform Factor (ความสมบูรณ์ของแปลง)**: A percentage (65-90%) representing the crop's uniformity and health.
+    -   **Standing Area (พื้นที่ปลูกคงเหลือ)**: The total area remaining for harvest in Rai.
+4.  **Calculate**: Click the "Calculate Yield" (คำนวณผลผลิต) button.
+5.  **View Results**: The app displays:
+    -   **Female Population per Rai**: Estimated number of female plants.
+    -   **Yield per Rai**: Estimated yield in Kg/Rai.
+    -   **Total Wet Ear**: Total estimated production in Kg for the specified standing area.
 
-1.  **Open the Application**: Launch the `index.html` file in your web browser. A background image will load, and the interface will appear.
-2.  **Allow Location Access**: When prompted, allow the browser to access your location. The app will automatically fetch and display your current Latitude and Longitude.
-    *   *Note: If location access is denied, you will not be able to record coordinates.*
-3.  **Fill in Details**: Enter the required information in the form:
-    *   **Name**: Your first name.
-    *   **Last Name**: Your surname.
-    *   **Variety**: Select the crop or item variety from the dropdown menu (e.g., #51, #55, #SB).
-    *   **Area (Rai)**: Enter the field area or number.
-4.  **Record Location**: Click the **"Record Location"** button.
-    *   The app validates that all fields are filled and location data is available.
-    *   If successful, the data is saved locally in the viewing session and sent to the configured Google Sheet.
-    *   A success message will appear at the bottom.
-5.  **Data Export**:
-    *   Data is automatically sent to the connected Google Sheet for real-time tracking.
-    *   *(Optional)* Code for exporting to Excel is included but commented out by default.
+## Calculation Logic
+The yield estimate is derived using the following formula:
+
+```javascript
+Yield Estimate (Kg/Rai) = 
+  (
+    (
+      (1600 / (Row Spacing / 100)) / (4 / Ears in 4M) 
+    ) * Female Area * Kernels per Ear * (Uniform Factor / 100)
+  ) / Kernels per Kg / 0.6
+```
+
+*Note: The final division by 0.6 adjusts the estimate based on specific crop parameters.*
